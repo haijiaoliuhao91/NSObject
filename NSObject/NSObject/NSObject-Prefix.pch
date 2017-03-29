@@ -1,0 +1,20 @@
+//
+//  NSObject-Prefix.pch
+//  NSObject
+//
+//  Created by 张波 on 2017/3/29.
+//  Copyright © 2017年 张波. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifdef DEBUG
+    #define NSLog(...) NSLog(__VA_ARGS__)
+#else
+    #define NSLog()
+#endif
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Person.h"
 
 @interface ViewController ()
 
@@ -14,10 +15,16 @@
 
 @implementation ViewController
 
+#pragma mark - LifeCycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"%s", __FUNCTION__);
     self.view.backgroundColor = [UIColor grayColor];
+    
+    Person *p1 = [[Person alloc] init];
+    Person *p2 = [[Person alloc] init];
+    NSLog(@"p1:%@, description:%@", p1, p1.description);
 }
 
 @end
